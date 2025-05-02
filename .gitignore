@@ -1,0 +1,37 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode local configs
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables & secrets
+.env
+*.env
+
+# Logs and debug
+*.log
+
+# MySQL dumps (except initdb folder)
+*.sql
+!initdb/*.sql
+
+
+# Data files
+data/raw_*/
+*.csv
+
+# LangChain or Upstage cache (if any)
+.cache/
