@@ -1,0 +1,339 @@
+{
+  "느타리버섯|||애느타리버섯": {
+    "product_name": "애느타리버섯",
+    "detail": null
+  },
+  "김|||얼구운김": {
+    "product_name": "김",
+    "detail": null
+  },
+
+  "방울토마토|||대추방울토마토": {
+    "product_name": "대추방울토마토",
+    "detail": null
+  },
+  "쌀|||10kg": {
+    "product_name": "쌀",
+    "detail": null
+  },
+  "감자|||수미(시설)": {
+    "product_name": "감자",
+    "detail": null
+  },
+  "풋고추|||오이맛고추": {
+    "product_name": "풋고추",
+    "detail": null
+  },
+  "아보카도|||수입": {
+    "product_name": "아보카도",
+    "detail": "수입"
+  },
+  "고등어|||국산(냉동)": {
+    "product_name": "고등어",
+    "detail": "국산"
+  },
+  "명태|||냉동(원양수입통합)": {
+    "product_name": "명태",
+    "detail": "냉동"
+  },
+  "조기|||참조기(냉동)": {
+    "product_name": "조기",
+    "detail": "냉동"
+  },
+  "호박|||쥬키니": {
+    "product_name": "쥬키니 호박",
+    "detail": null
+  },
+  "고춧가루|||중국": {
+    "product_name": "고춧가루",
+    "detail": "중국"
+  },
+  "피망|||청": {
+    "product_name": "피망",
+    "detail": null
+  },
+  "느타리버섯|||느타리버섯": {
+    "product_name": "애느타리버섯",
+    "detail": null
+  },
+  "알배기배추|||알배기배추": {
+    "product_name": "알배기배추",
+    "detail": null
+  },
+  "브로콜리|||브로콜리(국산)": {
+    "product_name": "브로콜리",
+    "detail": "국산"
+  },
+  "쌀|||20kg": {
+    "product_name": "쌀 20kg",
+    "detail": null
+  },
+  "찹쌀|||일반계": {
+    "product_name": "찹쌀",
+    "detail": null
+  },
+  "콩|||흰 콩(국산)": {
+    "product_name": "콩",
+    "detail": "국산"
+  },
+  "팥|||붉은 팥(국산)": {
+    "product_name": "팥",
+    "detail": "국산"
+  },
+  "녹두|||국산": {
+    "product_name": "녹두",
+    "detail": "국산"
+  },
+  "갈치|||국산(냉장)": {
+    "product_name": "갈치",
+    "detail": "국산"
+  },
+  "건멸치|||건멸치": {
+    "product_name": "건멸치",
+    "detail": null
+  },
+  "고구마|||밤": {
+    "product_name": "고구마",
+    "detail": null
+  },
+  "감자|||수미(노지)": {
+    "product_name": "감자",
+    "detail": null
+  },
+  "배추|||봄": {
+    "product_name": "봄배추",
+    "detail": null
+  },
+  "양배추|||양배추": {
+    "product_name": "양배추",
+    "detail": null
+  },
+  "시금치|||시금치": {
+    "product_name": "시금치",
+    "detail": null
+  },
+  "상추|||적": {
+    "product_name": "적상추",
+    "detail": null
+  },
+  "상추|||청": {
+    "product_name": "청상추",
+    "detail": null
+  },
+  "얼갈이배추|||얼갈이배추": {
+    "product_name": "얼갈이배추",
+    "detail": null
+  },
+  "수박|||수박": {
+    "product_name": "수박",
+    "detail": null
+  },
+  "참외|||참외": {
+    "product_name": "참외",
+    "detail": null
+  },
+  "오이|||다다기계통": {
+    "product_name": "오이",
+    "detail": null
+  },
+  "오이|||취청": {
+    "product_name": "취청 오이",
+    "detail": null
+  },
+  "호박|||애호박": {
+    "product_name": "애호박",
+    "detail": null
+  },
+  "호박|||쥬키니": {
+    "product_name": "쥬키니 호박",
+    "detail": null
+  },
+  "토마토|||토마토": {
+    "product_name": "토마토",
+    "detail": null
+  },
+  "딸기|||딸기": {
+    "product_name": "딸기",
+    "detail": null
+  },
+  "무|||월동": {
+    "product_name": "무",
+    "detail": "국산"
+  },
+  "당근|||무세척": {
+    "product_name": "당근",
+    "detail": null
+  },
+  "열무|||열무": {
+    "product_name": "열무",
+    "detail": null
+  },
+  "건고추|||화건": {
+    "product_name": "건고추",
+    "detail": null
+  },
+  "풋고추|||풋고추(녹광 등)": {
+    "product_name": "풋고추",
+    "detail": null
+  },
+  "풋고추|||꽈리고추": {
+    "product_name": "꽈리고추",
+    "detail": null
+  },
+  "풋고추|||청양고추": {
+    "product_name": "청양고추",
+    "detail": null
+  },
+  "붉은고추|||붉은고추": {
+    "product_name": "붉은고추",
+    "detail": null
+  },
+  "깐마늘(국산)|||깐마늘(국산)": {
+    "product_name": "깐마늘",
+    "detail": "국산"
+  },
+  "양파|||양파": {
+    "product_name": "양파",
+    "detail": null
+  },
+  "파|||대파": {
+    "product_name": "대파",
+    "detail": null
+  },
+  "파|||쪽파": {
+    "product_name": "쪽파",
+    "detail": null
+  },
+  "생강|||국산": {
+    "product_name": "생강",
+    "detail": "국산"
+  },
+  "미나리|||미나리": {
+    "product_name": "미나리",
+    "detail": null
+  },
+  "깻잎|||깻잎": {
+    "product_name": "깻잎",
+    "detail": null
+  },
+  "피망|||청": {
+    "product_name": "청피망",
+    "detail": null
+  },
+  "파프리카|||파프리카": {
+    "product_name": "파프리카",
+    "detail": null
+  },
+  "참깨|||백색(국산)": {
+    "product_name": "참깨",
+    "detail": "국산"
+  },
+  "참깨|||중국": {
+    "product_name": "참깨",
+    "detail": "중국"
+  },
+  "땅콩|||국산": {
+    "product_name": "땅콩",
+    "detail": "국산"
+  },
+  "땅콩|||수입": {
+    "product_name": "땅콩",
+    "detail": "수입"
+  },
+  "느타리버섯|||느타리버섯": {
+    "product_name": "느타리버섯",
+    "detail": null
+  },
+  "팽이버섯|||팽이버섯": {
+    "product_name": "팽이버섯",
+    "detail": null
+  },
+  "새송이버섯|||새송이버섯": {
+    "product_name": "새송이버섯",
+    "detail": null
+  },
+  "사과|||후지": {
+    "product_name": "사과",
+    "detail": "수입"
+  },
+  "배|||신고": {
+    "product_name": "배",
+    "detail": null
+  },
+  "바나나|||수입": {
+    "product_name": "바나나",
+    "detail": "수입"
+  },
+  "오렌지|||네이블 미국": {
+    "product_name": "오렌지",
+    "detail": "수입"
+  },
+  "고등어|||국산(염장)": {
+    "product_name": "고등어",
+    "detail": "국산"
+  },
+  "고등어|||국산(신선 냉장)": {
+    "product_name": "고등어",
+    "detail": "국산"
+  },
+  "건오징어|||건오징어": {
+    "product_name": "건오징어",
+    "detail": null
+  },
+  "김|||마른김": {
+    "product_name": "김",
+    "detail": null
+  },
+  "건미역|||건미역": {
+    "product_name": "건미역",
+    "detail": null
+  },
+  "수입조기|||부세수입(냉동)": {
+    "product_name": "조기",
+    "detail": "수입"
+  },
+  "호두|||수입": {
+    "product_name": "호두",
+    "detail": "수입"
+  },
+  "아몬드|||수입": {
+    "product_name": "아몬드",
+    "detail": "수입"
+  },
+  "레몬|||수입": {
+    "product_name": "레몬",
+    "detail": "수입"
+  },
+  "파인애플|||수입": {
+    "product_name": "파인애플",
+    "detail": "수입"
+  },
+  "망고|||수입": {
+    "product_name": "망고",
+    "detail": "수입"
+  },
+  "고춧가루|||국산": {
+    "product_name": "고춧가루",
+    "detail": "국산"
+  },
+  "고춧가루|||중국": {
+    "product_name": "고춧가루",
+    "detail": "중국"
+  },
+  "새우젓|||새우젓": {
+    "product_name": "새우젓",
+    "detail": null
+  },
+  "멸치액젓|||멸치액젓": {
+    "product_name": "멸치액젓",
+    "detail": null
+  },
+  "굵은소금|||굵은소금": {
+    "product_name": "굵은소금",
+    "detail": null
+  },
+  "새우|||흰다리(수입)": {
+    "product_name": "새우",
+    "detail": "수입"
+  }
+}
