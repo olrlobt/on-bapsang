@@ -1,0 +1,31 @@
+package com.on_bapsang.backend.dto;
+
+import com.on_bapsang.backend.entity.Post;
+import lombok.Getter;
+
+import java.time.LocalDateTime;
+
+@Getter
+public class PostSummaryWithScrap {
+    private final Long id;
+    private final String title;
+    private final String imageUrl;
+    private final String nickname;
+    private final String profileImage;
+    private final int scrapCount;
+    private final int commentCount;
+    private final LocalDateTime createdAt;
+    private final boolean isScrapped;
+
+    public PostSummaryWithScrap(Post post, boolean isScrapped) {
+        this.id = post.getId();
+        this.title = post.getTitle();
+        this.imageUrl = post.getImageUrl();
+        this.nickname = post.getUser().getNickname();
+        this.profileImage = post.getUser().getProfileImage();
+        this.scrapCount = post.getScrapCount();
+        this.commentCount = post.getCommentCount();
+        this.createdAt = post.getCreatedAt();
+        this.isScrapped = isScrapped;
+    }
+}

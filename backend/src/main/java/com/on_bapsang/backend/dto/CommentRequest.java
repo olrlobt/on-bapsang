@@ -1,14 +1,12 @@
+// 댓글 작성용 DTO
 package com.on_bapsang.backend.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Getter
-@Setter
 @NoArgsConstructor
-public class PostRequest {
-    private String title;
+public class CommentRequest {
     private String content;
-    private String recipeTag;
+    private Long parentId; // 대댓글일 경우 부모 댓글 ID (없으면 null)
 }
