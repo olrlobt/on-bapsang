@@ -99,17 +99,26 @@ for result in results['matches']:
         })
 
 # 프롬프트 만들기
-prompt_text = f"""
-You are a professional Korean chef. You must choose **exactly 5** recipes from the provided list that are most similar or most appropriate to recommend for the foreign dish '{foreign_dish}'. 
-- **절대** 후보 리스트 외의 요리는 언급하지 마세요.
+# prompt_text = f"""
+# You are a professional Korean chef. You must choose **exactly 5** recipes from the provided list that are most similar or most appropriate to recommend for the foreign dish '{foreign_dish}'. 
+# - **절대** 후보 리스트 외의 요리는 언급하지 마세요.
 
-- 1차 기준: 주재료 기반(면 vs 밥 등)
-- 2차 기준: 맛 프로파일(매운맛, 단맛, 신맛, 짭짤함, 감칠맛 등)
-- 추천 순위 이해를 돕기 위해 0부터 100까지의 유사도 점수(score)도 함께 제공하세요.
+# - 1차 기준: 주재료 기반(면 vs 밥 등)
+# - 2차 기준: 맛 프로파일(매운맛, 단맛, 신맛, 짭짤함, 감칠맛 등)
+# - 추천 순위 이해를 돕기 위해 0부터 100까지의 유사도 점수(score)도 함께 제공하세요.
+# \n\n
+
+# 추천 레시피 리스트:
+# """
+prompt_text = f"""
+You are a professional Korean chef. You must choose **exactly 5** Korean recipes from the provided list that are most similar or most appropriate to recommend for the foreign dish '{foreign_dish}'. 
+- **절대** 후보 리스트 외의 요리는 언급하지 마세요.
 \n\n
 
 추천 레시피 리스트:
 """
+
+
 for idx, rec in enumerate(recommended_recipes, start=1):
     prompt_text += f"{idx}. {rec['name']} - {rec['description']} (유사도 점수: {rec['score']})\n"
 

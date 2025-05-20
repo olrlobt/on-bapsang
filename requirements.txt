@@ -6,3 +6,5 @@ langchain==0.1.13
 chardet
 pinecone
 openai
+fastapi
+uvicorn[standard]
