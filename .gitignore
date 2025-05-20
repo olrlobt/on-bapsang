@@ -26,7 +26,6 @@ Thumbs.db
 
 # MySQL dumps (except initdb folder)
 *.sql
-!initdb/*.sql
 
 
 # Data files
