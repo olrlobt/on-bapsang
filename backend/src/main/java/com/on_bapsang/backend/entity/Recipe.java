@@ -36,5 +36,7 @@ public class Recipe {
 
     @Column(name = "image_url")
     private String imageUrl;
+    @Column(name = "instruction", columnDefinition = "TEXT")
+    private String instruction;
 
 }
