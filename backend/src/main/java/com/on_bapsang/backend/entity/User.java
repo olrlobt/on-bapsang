@@ -5,7 +5,9 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "Users")
@@ -28,6 +30,9 @@ public class User {
     @Column(length = 50)
     private String nickname;
 
+    @Column(length = 255)
+    private String profileImage;
+
     @Column(length = 50)
     private String country;
 
@@ -47,15 +52,13 @@ public class User {
     @Column(nullable = false)
     private boolean deleted = false;
 
-    // 사용자 선호 taste 목록
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserFavoriteTaste> favoriteTastes = new ArrayList<>();
+    private Set<UserFavoriteDish> favoriteDishes = new HashSet<>();
 
-    // 사용자 선호 dish 목록
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserFavoriteDish> favoriteDishes = new ArrayList<>();
+    private Set<UserFavoriteIngredient> favoriteIngredients = new HashSet<>();
 
-    // 사용자 선호 ingredient 목록
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserFavoriteIngredient> favoriteIngredients = new ArrayList<>();
+    private Set<UserFavoriteTaste> favoriteTastes = new HashSet<>();
+
 }

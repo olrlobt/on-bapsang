@@ -2,15 +2,16 @@ package com.on_bapsang.backend.service;
 
 import com.on_bapsang.backend.dto.LoginRequest;
 import com.on_bapsang.backend.dto.UpdateUserRequest;
-import com.on_bapsang.backend.exception.CustomException;
-import org.springframework.http.HttpStatus;
 import com.on_bapsang.backend.dto.SignupRequest;
 import com.on_bapsang.backend.entity.*;
+import com.on_bapsang.backend.exception.CustomException;
 import com.on_bapsang.backend.repository.*;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -28,20 +29,20 @@ public class UserService {
 
     @Transactional
     public void registerUser(SignupRequest request) {
-        // 0. 아이디 중복 검사
+        // 아이디 중복 검사
         if (userRepository.existsByUsername(request.getUsername())) {
             throw new CustomException("이미 존재하는 아이디입니다.", HttpStatus.CONFLICT);
         }
 
-        // 1. 재료는 필수
+        // 재료 필수
         if (request.getFavoriteIngredientIds() == null || request.getFavoriteIngredientIds().isEmpty()) {
             throw new CustomException("좋아하는 음식(재료)은 최소 1개 이상 선택해야 합니다.", HttpStatus.BAD_REQUEST);
         }
 
-        // 2. 비밀번호 암호화
+        // 비밀번호 암호화
         String encryptedPassword = passwordEncoder.encode(request.getPassword());
 
-        // 3. User 저장
+        // User 저장
         User user = User.builder()
                 .username(request.getUsername())
                 .password(encryptedPassword)
@@ -52,26 +53,32 @@ public class UserService {
                 .build();
         userRepository.save(user);
 
-        // 4. 연관 Taste 저장 (선택)
+        // Taste 저장 (중복 방지)
         if (request.getFavoriteTasteIds() != null) {
             List<Taste> tastes = tasteRepository.findAllById(request.getFavoriteTasteIds());
             for (Taste taste : tastes) {
-                userFavoriteTasteRepository.save(new UserFavoriteTaste(null, user, taste));
+                if (!userFavoriteTasteRepository.existsByUserAndTaste(user, taste)) {
+                    userFavoriteTasteRepository.save(new UserFavoriteTaste(null, user, taste));
+                }
             }
         }
 
-        // 5. 연관 Dish 저장 (선택)
+        // Dish 저장 (중복 방지)
         if (request.getFavoriteDishIds() != null) {
             List<Dish> dishes = dishRepository.findAllById(request.getFavoriteDishIds());
             for (Dish dish : dishes) {
-                userFavoriteDishRepository.save(new UserFavoriteDish(null, user, dish));
+                if (!userFavoriteDishRepository.existsByUserAndDish(user, dish)) {
+                    userFavoriteDishRepository.save(new UserFavoriteDish(null, user, dish));
+                }
             }
         }
 
-        // 6. 연관 Ingredient 저장 (필수)
+        // Ingredient 저장 (필수 + 중복 방지)
         List<Ingredient> ingredients = ingredientRepository.findAllById(request.getFavoriteIngredientIds());
         for (Ingredient ingredient : ingredients) {
-            userFavoriteIngredientRepository.save(new UserFavoriteIngredient(null, user, ingredient, "좋아함"));
+            if (!userFavoriteIngredientRepository.existsByUserAndIngredient(user, ingredient)) {
+                userFavoriteIngredientRepository.save(new UserFavoriteIngredient(null, user, ingredient, "좋아함"));
+            }
         }
     }
 
@@ -88,7 +95,10 @@ public class UserService {
 
         // Taste 수정
         if (request.getFavoriteTasteIds() != null) {
-            userFavoriteTasteRepository.deleteAllByUser(user); // 기존 삭제
+            System.out.println("start del taste");
+            userFavoriteTasteRepository.deleteAllByUser(user);
+            System.out.println("finish del taste");
+
             List<Taste> tastes = tasteRepository.findAllById(request.getFavoriteTasteIds());
             for (Taste taste : tastes) {
                 userFavoriteTasteRepository.save(new UserFavoriteTaste(null, user, taste));
@@ -97,7 +107,10 @@ public class UserService {
 
         // Dish 수정
         if (request.getFavoriteDishIds() != null) {
+            System.out.println("start del dish");
             userFavoriteDishRepository.deleteAllByUser(user);
+            System.out.println("finish del dish");
+
             List<Dish> dishes = dishRepository.findAllById(request.getFavoriteDishIds());
             for (Dish dish : dishes) {
                 userFavoriteDishRepository.save(new UserFavoriteDish(null, user, dish));
@@ -106,16 +119,14 @@ public class UserService {
 
         // Ingredient 수정
         if (request.getFavoriteIngredientIds() != null) {
+            System.out.println("start del ingre");
             userFavoriteIngredientRepository.deleteAllByUser(user);
+            System.out.println("finish del ingre");
+
             List<Ingredient> ingredients = ingredientRepository.findAllById(request.getFavoriteIngredientIds());
             for (Ingredient ingredient : ingredients) {
                 userFavoriteIngredientRepository.save(new UserFavoriteIngredient(null, user, ingredient, "좋아함"));
             }
         }
     }
-
-
-
-
-
 }

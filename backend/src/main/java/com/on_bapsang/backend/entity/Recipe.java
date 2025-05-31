@@ -1,8 +1,8 @@
 package com.on_bapsang.backend.entity;
 
-
-import lombok.*;
 import jakarta.persistence.*;
+import lombok.*;
+
 
 @Entity
 @Table(name = "Recipe")
@@ -10,12 +10,11 @@ import jakarta.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-
 public class Recipe {
+
     @Id
     @Column(name = "recipe_id", length = 32)
-    private  String recipeId;
+    private String recipeId;
 
     @Column(nullable = false)
     private String name;
@@ -36,7 +35,7 @@ public class Recipe {
 
     @Column(name = "image_url")
     private String imageUrl;
+
     @Column(name = "instruction", columnDefinition = "TEXT")
     private String instruction;
-
 }
