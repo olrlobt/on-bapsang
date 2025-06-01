@@ -24,6 +24,7 @@ public class PostService {
     private final PostRepository postRepository;
     private final RecipeRepository recipeRepository;
     private final ScrapService scrapService;
+    private final SearchKeywordService searchKeywordService;
 
     // 게시글 생성
     public Post create(PostRequest request, User user, String imageUrl) {
@@ -46,13 +47,16 @@ public class PostService {
 
 
     // 게시글 검색
-    public Page<PostSummary> getPosts(String keyword, Pageable pageable) {
-        if (keyword == null || keyword.isBlank()) {
-            return postRepository.findPostSummariesWithUser(pageable);
-        } else {
+    public Page<PostSummary> getPosts(String keyword, Pageable pageable, User user) {
+        if (keyword != null && !keyword.isBlank()) {
+            searchKeywordService.saveRecentKeyword(user.getUserId(), keyword);
+            searchKeywordService.increaseKeywordScore(keyword);
             return postRepository.findPostSummariesWithUser(keyword, pageable);
+        } else {
+            return postRepository.findPostSummariesWithUser(pageable);
         }
     }
+
 
 
 

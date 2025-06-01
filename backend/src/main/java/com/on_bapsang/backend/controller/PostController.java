@@ -64,9 +64,11 @@ public class PostController {
     @GetMapping
     public ResponseEntity<?> getPosts(
             @RequestParam(required = false) String keyword,  // 검색 키워드
-            @PageableDefault(size = 9, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable
+            @PageableDefault(size = 9, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable,
+            @AuthenticationPrincipal UserDetailsImpl userDetails
     ) {
-        Page<PostSummary> posts = postService.getPosts(keyword, pageable);
+        User user = userDetails.getUser();
+        Page<PostSummary> posts = postService.getPosts(keyword, pageable, user);
         return ResponseEntity.ok(ApiResponse.success("게시글 목록 조회 성공", posts));
 
     }
