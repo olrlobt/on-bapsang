@@ -23,6 +23,13 @@ services:
       interval: 5s
       retries: 5
 
+  redis:
+    image: redis:7.2
+    container_name: bapsang-redis
+    ports:
+      - "6379:6379"
+    restart: always
+
 
   backend:
     build:
@@ -47,6 +54,7 @@ services:
     depends_on:
       - db
       - ai
+      - redis
     ports:
       - "8081:8081"
     networks:
@@ -68,7 +76,7 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db   
+      - db
     networks:
       - onbapsang-net
 

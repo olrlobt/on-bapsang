@@ -10,6 +10,8 @@ public class ScrappedPost {
     private int scrapCount;
     private int commentCount;
     private LocalDateTime createdAt;
+    private Double x;
+    private Double y;
 
     public ScrappedPost(Long postId, String title, String imageUrl, int scrapCount, int commentCount, LocalDateTime createdAt) {
         this.postId = postId;
@@ -18,6 +20,8 @@ public class ScrappedPost {
         this.scrapCount = scrapCount;
         this.commentCount = commentCount;
         this.createdAt = createdAt;
+        this.x = x;
+        this.y = y;
     }
 
     public Long getPostId() {
@@ -43,4 +47,8 @@ public class ScrappedPost {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
+
+    public Double getX() { return x; }
+
+    public Double getY() { return y; }
 }
