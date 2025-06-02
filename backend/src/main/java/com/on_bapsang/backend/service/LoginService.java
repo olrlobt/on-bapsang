@@ -36,15 +36,15 @@ public class LoginService {
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
         }
 
-        // ✅ Access Token & Refresh Token 발급
+        // Access Token & Refresh Token 발급
         String accessToken = jwtUtil.generateToken(user.getUsername(), user.getUserId());
         String refreshToken = jwtUtil.generateRefreshToken(user.getUsername());
 
-        // ✅ Refresh Token 저장
+        // Refresh Token 저장
         user.setRefreshToken(refreshToken);
         userRepository.save(user);
 
-        // ✅ 두 토큰을 JSON으로 반환
+        // 두 토큰을 JSON으로 반환
         return new TokenResponse(accessToken, refreshToken);
     }
 

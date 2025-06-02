@@ -2,8 +2,20 @@ package com.on_bapsang.backend.repository;
 
 import com.on_bapsang.backend.entity.User;
 import com.on_bapsang.backend.entity.UserFavoriteIngredient;
+import com.on_bapsang.backend.entity.Ingredient;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.repository.query.Param;
 
 public interface UserFavoriteIngredientRepository extends JpaRepository<UserFavoriteIngredient, Long> {
-    void deleteAllByUser(User user);
+
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM UserFavoriteIngredient ufi WHERE ufi.user = :user")
+    void deleteAllByUser(@Param("user") User user);
+
+    // 중복 저장 방지용 exists 메서드 추가
+    boolean existsByUserAndIngredient(User user, Ingredient ingredient);
 }
