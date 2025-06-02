@@ -15,6 +15,8 @@ public class PostDetail {
     private final String profileImage;
     private final int scrapCount;
     private final int commentCount;
+    private Double x;
+    private Double y;
     private final LocalDateTime createdAt;
 
     public PostDetail(Post post) {
@@ -26,6 +28,8 @@ public class PostDetail {
         this.profileImage = post.getUser().getProfileImage();
         this.scrapCount = post.getScrapCount();
         this.commentCount = post.getCommentCount();
+        this.x = post.getX();
+        this.y = post.getY();
         this.createdAt = post.getCreatedAt();
     }
 }

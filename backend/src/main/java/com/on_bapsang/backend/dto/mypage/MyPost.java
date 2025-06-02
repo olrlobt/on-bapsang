@@ -11,6 +11,8 @@ public class MyPost {
     private int scrapCount;
     private int commentCount;
     private LocalDateTime createdAt;
+    private Double x;
+    private Double y;
 
     public MyPost(Long postId, String title, String content, String imageUrl,
                   int scrapCount, int commentCount, LocalDateTime createdAt) {
@@ -21,6 +23,8 @@ public class MyPost {
         this.scrapCount = scrapCount;
         this.commentCount = commentCount;
         this.createdAt = createdAt;
+        this.x = x;
+        this.y = y;
     }
 
 }

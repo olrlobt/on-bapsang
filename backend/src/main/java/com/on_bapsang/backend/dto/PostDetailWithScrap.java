@@ -15,6 +15,8 @@ public class PostDetailWithScrap {
     private final String profileImage;
     private final int scrapCount;
     private final int commentCount;
+    private final Double x;
+    private final Double y;
     private final LocalDateTime createdAt;
     private final boolean isScrapped;
 
@@ -27,6 +29,8 @@ public class PostDetailWithScrap {
         this.profileImage = post.getUser().getProfileImage();
         this.scrapCount = post.getScrapCount();
         this.commentCount = post.getCommentCount();
+        this.x = post.getX();
+        this.y = post.getY();
         this.createdAt = post.getCreatedAt();
         this.isScrapped = isScrapped;
     }

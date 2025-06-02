@@ -33,6 +33,8 @@ public class PostService {
         post.setContent(request.getContent());
         post.setRecipeTag(request.getRecipeTag());
         post.setImageUrl(imageUrl);
+        post.setX(request.getX());
+        post.setY(request.getY());
         post.setUser(user);
         return postRepository.save(post);
     }
@@ -95,6 +97,8 @@ public class PostService {
         post.setTitle(request.getTitle());
         post.setContent(request.getContent());
         post.setRecipeTag(request.getRecipeTag());
+        post.setX(request.getX());
+        post.setY(request.getY());
 
         // 이미지가 새로 들어왔을 때만 업데이트
         if (imageUrl != null) {
