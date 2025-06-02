@@ -13,7 +13,9 @@ public class ScrappedPost {
     private Double x;
     private Double y;
 
-    public ScrappedPost(Long postId, String title, String imageUrl, int scrapCount, int commentCount, LocalDateTime createdAt) {
+    public ScrappedPost(Long postId, String title, String imageUrl,
+                        int scrapCount, int commentCount, LocalDateTime createdAt,
+                        Double x, Double y) {
         this.postId = postId;
         this.title = title;
         this.imageUrl = imageUrl;
@@ -23,6 +25,7 @@ public class ScrappedPost {
         this.x = x;
         this.y = y;
     }
+
 
     public Long getPostId() {
         return postId;

@@ -60,8 +60,6 @@ public class PostService {
     }
 
 
-
-
     // 개별 글 검색
     @Transactional(readOnly = true)
     public PostDetail getPostById(Long id) {
