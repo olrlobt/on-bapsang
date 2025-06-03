@@ -1,0 +1,310 @@
+[
+  {
+    "ingredient_id": 29867,
+    "ingredient_name": "느타리버섯"
+  },
+  {
+    "ingredient_id": 29868,
+    "ingredient_name": "청양고추"
+  },
+  {
+    "ingredient_id": 29879,
+    "ingredient_name": "감자"
+  },
+  {
+    "ingredient_id": 29880,
+    "ingredient_name": "애호박"
+  },
+  {
+    "ingredient_id": 29883,
+    "ingredient_name": "시금치"
+  },
+  {
+    "ingredient_id": 29884,
+    "ingredient_name": "대파"
+  },
+  {
+    "ingredient_id": 29896,
+    "ingredient_name": "새송이버섯"
+  },
+  {
+    "ingredient_id": 29899,
+    "ingredient_name": "당근"
+  },
+  {
+    "ingredient_id": 29901,
+    "ingredient_name": "양파"
+  },
+  {
+    "ingredient_id": 29909,
+    "ingredient_name": "갈치"
+  },
+  {
+    "ingredient_id": 29915,
+    "ingredient_name": "깻잎"
+  },
+  {
+    "ingredient_id": 29918,
+    "ingredient_name": "무"
+  },
+  {
+    "ingredient_id": 29925,
+    "ingredient_name": "고구마"
+  },
+  {
+    "ingredient_id": 29929,
+    "ingredient_name": "양배추"
+  },
+  {
+    "ingredient_id": 29944,
+    "ingredient_name": "팽이버섯"
+  },
+  {
+    "ingredient_id": 29945,
+    "ingredient_name": "토마토"
+  },
+  {
+    "ingredient_id": 29946,
+    "ingredient_name": "오이"
+  },
+  {
+    "ingredient_id": 29961,
+    "ingredient_name": "멸치액젓"
+  },
+  {
+    "ingredient_id": 29972,
+    "ingredient_name": "콩"
+  },
+  {
+    "ingredient_id": 29973,
+    "ingredient_name": "쌀"
+  },
+  {
+    "ingredient_id": 29983,
+    "ingredient_name": "고춧가루"
+  },
+  {
+    "ingredient_id": 29991,
+    "ingredient_name": "쪽파"
+  },
+  {
+    "ingredient_id": 29992,
+    "ingredient_name": "굵은소금"
+  },
+  {
+    "ingredient_id": 29995,
+    "ingredient_name": "바나나"
+  },
+  {
+    "ingredient_id": 30010,
+    "ingredient_name": "미나리"
+  },
+  {
+    "ingredient_id": 30011,
+    "ingredient_name": "꽈리고추"
+  },
+  {
+    "ingredient_id": 30029,
+    "ingredient_name": "알배기배추"
+  },
+  {
+    "ingredient_id": 31485,
+    "ingredient_name": "아보카도"
+  },
+  {
+    "ingredient_id": 31647,
+    "ingredient_name": "들깨"
+  },
+  {
+    "ingredient_id": 33039,
+    "ingredient_name": "파인애플"
+  },
+  {
+    "ingredient_id": 33254,
+    "ingredient_name": "레몬"
+  },
+  {
+    "ingredient_id": 33255,
+    "ingredient_name": "사과"
+  },
+  {
+    "ingredient_id": 34208,
+    "ingredient_name": "생강"
+  },
+  {
+    "ingredient_id": 35156,
+    "ingredient_name": "참깨"
+  },
+  {
+    "ingredient_id": 35912,
+    "ingredient_name": "딸기"
+  },
+  {
+    "ingredient_id": 36359,
+    "ingredient_name": "파프리카"
+  },
+  {
+    "ingredient_id": 37682,
+    "ingredient_name": "풋고추"
+  },
+  {
+    "ingredient_id": 38536,
+    "ingredient_name": "새우젓"
+  },
+  {
+    "ingredient_id": 38726,
+    "ingredient_name": "브로콜리"
+  },
+  {
+    "ingredient_id": 39159,
+    "ingredient_name": "찹쌀"
+  },
+  {
+    "ingredient_id": 39162,
+    "ingredient_name": "팥"
+  },
+  {
+    "ingredient_id": 39996,
+    "ingredient_name": "배"
+  },
+  {
+    "ingredient_id": 40299,
+    "ingredient_name": "땅콩"
+  },
+  {
+    "ingredient_id": 40813,
+    "ingredient_name": "애느타리버섯"
+  },
+  {
+    "ingredient_id": 45178,
+    "ingredient_name": "적상추"
+  },
+  {
+    "ingredient_id": 45211,
+    "ingredient_name": "가리비"
+  },
+  {
+    "ingredient_id": 45642,
+    "ingredient_name": "배추"
+  },
+  {
+    "ingredient_id": 47678,
+    "ingredient_name": "고등어"
+  },
+  {
+    "ingredient_id": 47811,
+    "ingredient_name": "망고"
+  },
+  {
+    "ingredient_id": 48610,
+    "ingredient_name": "명태"
+  },
+  {
+    "ingredient_id": 49866,
+    "ingredient_name": "수박"
+  },
+  {
+    "ingredient_id": 50687,
+    "ingredient_name": "청상추"
+  },
+  {
+    "ingredient_id": 50921,
+    "ingredient_name": "건다시마"
+  },
+  {
+    "ingredient_id": 51897,
+    "ingredient_name": "열무"
+  },
+  {
+    "ingredient_id": 54839,
+    "ingredient_name": "복숭아"
+  },
+  {
+    "ingredient_id": 55825,
+    "ingredient_name": "대추방울토마토"
+  },
+  {
+    "ingredient_id": 57102,
+    "ingredient_name": "참외"
+  },
+  {
+    "ingredient_id": 60665,
+    "ingredient_name": "멜론"
+  },
+  {
+    "ingredient_id": 61337,
+    "ingredient_name": "건고추"
+  },
+  {
+    "ingredient_id": 63596,
+    "ingredient_name": "홍합"
+  },
+  {
+    "ingredient_id": 64413,
+    "ingredient_name": "단감"
+  },
+  {
+    "ingredient_id": 66536,
+    "ingredient_name": "조기"
+  },
+  {
+    "ingredient_id": 66560,
+    "ingredient_name": "녹두"
+  },
+  {
+    "ingredient_id": 66614,
+    "ingredient_name": "청피망"
+  },
+  {
+    "ingredient_id": 66615,
+    "ingredient_name": "굴"
+  },
+  {
+    "ingredient_id": 66709,
+    "ingredient_name": "깐마늘"
+  },
+  {
+    "ingredient_id": 66726,
+    "ingredient_name": "건미역"
+  },
+  {
+    "ingredient_id": 67601,
+    "ingredient_name": "붉은고추"
+  },
+  {
+    "ingredient_id": 67650,
+    "ingredient_name": "오렌지"
+  },
+  {
+    "ingredient_id": 67857,
+    "ingredient_name": "체리"
+  },
+  {
+    "ingredient_id": 67874,
+    "ingredient_name": "건멸치"
+  },
+  {
+    "ingredient_id": 69166,
+    "ingredient_name": "얼갈이배추"
+  },
+  {
+    "ingredient_id": 69392,
+    "ingredient_name": "갓"
+  },
+  {
+    "ingredient_id": 69539,
+    "ingredient_name": "취청 오이"
+  },
+  {
+    "ingredient_id": 71150,
+    "ingredient_name": "포도"
+  },
+  {
+    "ingredient_id": 71300,
+    "ingredient_name": "쥬키니 호박"
+  },
+  {
+    "ingredient_id": 72780,
+    "ingredient_name": "감귤"
+  }
+]

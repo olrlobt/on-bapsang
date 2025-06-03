@@ -27,6 +27,7 @@ public class Post {
     private String content;
 
     // 이미지 URL 또는 서버 경로
+    @Column(length = 1000)
     private String imageUrl;
 
     // 자동완성으로 선택된 레시피 분류명
@@ -53,4 +54,8 @@ public class Post {
     public void onPrePersist() {
         this.createdAt = LocalDateTime.now();
     }
+
+    // 이미지 내 태그 좌표
+    private Double x;
+    private Double y;
 }

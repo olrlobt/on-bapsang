@@ -16,6 +16,8 @@ public class PostSummaryWithScrap {
     private final int commentCount;
     private final LocalDateTime createdAt;
     private final boolean isScrapped;
+    private final Double x;
+    private final Double y;
 
     public PostSummaryWithScrap(Post post, boolean isScrapped) {
         this.id = post.getId();
@@ -27,5 +29,7 @@ public class PostSummaryWithScrap {
         this.commentCount = post.getCommentCount();
         this.createdAt = post.getCreatedAt();
         this.isScrapped = isScrapped;
+        this.x = post.getX();
+        this.y = post.getY();
     }
 }

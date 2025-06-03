@@ -1,11 +1,10 @@
 package com.on_bapsang.backend.entity;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "RecipeIngredient")
+@Table(name = "recipeingredient")
 @Getter
 @Setter
 @NoArgsConstructor

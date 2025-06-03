@@ -15,9 +15,12 @@ public class PostSummary {
     private int commentCount;
     private LocalDateTime createdAt;
     private String nickname;
+    private Double x;
+    private Double y;
 
     public PostSummary(Long id, String title, String imageUrl, int scrapCount,
-                       int commentCount, LocalDateTime createdAt, String nickname) {
+                       int commentCount, LocalDateTime createdAt, String nickname,
+                       Double x, Double y) {
         this.id = id;
         this.title = title;
         this.imageUrl = imageUrl;
@@ -25,6 +28,8 @@ public class PostSummary {
         this.commentCount = commentCount;
         this.createdAt = createdAt;
         this.nickname = nickname;
+        this.x = x;
+        this.y = y;
     }
 
     public static PostSummary from(Post post) {
@@ -35,7 +40,9 @@ public class PostSummary {
                 post.getScrapCount(),
                 post.getCommentCount(),
                 post.getCreatedAt(),
-                post.getUser().getNickname()
+                post.getUser().getNickname(),
+                post.getX(),
+                post.getY()
         );
     }
 }

@@ -3,7 +3,6 @@ package com.on_bapsang.backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Entity
 @Table(name = "Recipe")
 @Getter

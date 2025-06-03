@@ -1,9 +1,13 @@
 package com.on_bapsang.backend.dto.mypage;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.time.LocalDateTime;
 
+@Getter
+@AllArgsConstructor
 public class MyPost {
-
     private Long postId;
     private String title;
     private String content;
@@ -11,16 +15,8 @@ public class MyPost {
     private int scrapCount;
     private int commentCount;
     private LocalDateTime createdAt;
-
-    public MyPost(Long postId, String title, String content, String imageUrl,
-                  int scrapCount, int commentCount, LocalDateTime createdAt) {
-        this.postId = postId;
-        this.title = title;
-        this.content = content;
-        this.imageUrl = imageUrl;
-        this.scrapCount = scrapCount;
-        this.commentCount = commentCount;
-        this.createdAt = createdAt;
-    }
-
+    private Double x;
+    private Double y;
 }
+
+
