@@ -23,14 +23,15 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
-                                "/api/auth/**",         // 로그인, 토큰 재발급
-                                "/api/users/signup",    // 회원가입
-                                "/api/seasonal/**"      // 제철농산물 조회는 비회원 허용
-                        ).permitAll()
-                        .anyRequest().authenticated()  // 그 외는 인증 필요
+                                "/api/auth/**", // 로그인, 토큰 재발급
+                                "/api/users/signup", // 회원가입
+                                "/api/seasonal/**", // 제철농산물 조회는 비회원 허용
+                                "/api/market/**")
+                        .permitAll()
+                        .anyRequest().authenticated() // 그 외는 인증 필요
                 )
-                .formLogin(form -> form.disable())    // 로그인 UI 제거
-                .httpBasic(httpBasic -> httpBasic.disable())  // 브라우저 팝업 로그인 제거
+                .formLogin(form -> form.disable()) // 로그인 UI 제거
+                .httpBasic(httpBasic -> httpBasic.disable()) // 브라우저 팝업 로그인 제거
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }

@@ -11,7 +11,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "Users")
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
