@@ -4,8 +4,6 @@ services:
     image: mysql:8.0
     container_name: bapsang-mysql
     restart: always
-    env_file:
-      - /home/ubuntu/.env
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -40,21 +38,19 @@ services:
     container_name: bapsang-backend
     restart: always
     environment:
-      - SERVER_PORT=8081
-      - MYSQL_HOST=db
-      - MYSQL_PORT=3306
-      - MYSQL_DATABASE=bapsang
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - UPSTAGE_API_TOKEN=${UPSTAGE_API_TOKEN}
-      - PINECONE_API_KEY=${PINECONE_API_KEY}
-      - PINECONE_ENVIRONMENT=${PINECONE_ENVIRONMENT}
-      - SPRING_DATA_REDIS_HOST=redis
-      - SPRING_DATA_REDIS_PORT=6379
-      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
-      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-    env_file:
-      - /home/ubuntu/.env
+      SERVER_PORT: ${SERVER_PORT}
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      UPSTAGE_API_TOKEN: ${UPSTAGE_API_TOKEN}
+      PINECONE_API_KEY: ${PINECONE_API_KEY}
+      PINECONE_ENVIRONMENT: ${PINECONE_ENVIRONMENT}
+      SPRING_DATA_REDIS_HOST: ${REDIS_HOST}
+      SPRING_DATA_REDIS_PORT: ${REDIS_PORT}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
     depends_on:
       - db
       - ai
@@ -69,17 +65,16 @@ services:
       context: .
       dockerfile: ai/Dockerfile
     container_name: bapsang-ai
-    env_file: /home/ubuntu/.env
     environment:
-      - MYSQL_HOST=db
-      - MYSQL_PORT=3306
-      - MYSQL_DATABASE=bapsang
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-    ports:
-      - "8000:8000"
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     depends_on:
       - db
+    ports:
+      - "8000:8000"
     networks:
       - onbapsang-net
 
