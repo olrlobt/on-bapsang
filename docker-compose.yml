@@ -5,7 +5,7 @@ services:
     container_name: bapsang-mysql
     restart: always
     env_file:
-      - ./.env
+      - /home/ubuntu/.env
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -54,7 +54,7 @@ services:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     env_file:
-      - ./.env
+      - /home/ubuntu/.env
     depends_on:
       - db
       - ai
@@ -69,7 +69,7 @@ services:
       context: .
       dockerfile: ai/Dockerfile
     container_name: bapsang-ai
-    env_file: ./.env
+    env_file: /home/ubuntu/.env
     environment:
       - MYSQL_HOST=db
       - MYSQL_PORT=3306
@@ -82,18 +82,6 @@ services:
       - db
     networks:
       - onbapsang-net
-
-  frontend:
-    build:
-      context: ../frontend
-      dockerfile: Dockerfile
-    container_name: bapsang-frontend
-    ports:
-      - "80:80"
-    networks:
-      - onbapsang-net
-    depends_on:
-      - backend
 
 volumes:
   db_data:
