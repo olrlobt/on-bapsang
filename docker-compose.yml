@@ -13,7 +13,7 @@ services:
       - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
-      - ./initdb:/docker-entrypoint-initdb.d
+      - /var/jenkins_home/workspace/cicd/initdb:/docker-entrypoint-initdb.d
       - ./mysql/conf.d:/etc/mysql/conf.d
     networks:
       - onbapsang-net
